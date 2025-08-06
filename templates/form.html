@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Customer Churn Predictor</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', sans-serif;
+            background-image: url('https://img.freepik.com/free-vector/customer-loyalty-concept-illustration_114360-7884.jpg');
+            background-size: cover;
+            background-position: center;
+            color: #fff;
+            text-align: center;
+            padding: 40px;
+            backdrop-filter: blur(4px);
+        }
+
+        h2 {
+            color: #ffeb3b;
+            margin-bottom: 30px;
+        }
+
+        form {
+            background: rgba(0, 0, 0, 0.6);
+            display: inline-block;
+            padding: 30px;
+            border-radius: 15px;
+        }
+
+        input, select {
+            margin: 8px;
+            padding: 8px;
+            border-radius: 5px;
+            border: none;
+            width: 200px;
+        }
+
+        input[type="submit"] {
+            background-color: #4caf50;
+            color: white;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        h3 {
+            margin-top: 30px;
+            color: #00e676;
+            font-size: 22px;
+        }
+    </style>
+</head>
+<body>
+    <h2>Customer Churn Prediction Form</h2>
+    <form method="POST" action="/predict">
+        <input type="text" name="tenure" placeholder="Tenure"><br>
+        <input type="text" name="MonthlyCharges" placeholder="Monthly Charges"><br>
+        <input type="text" name="TotalCharges" placeholder="Total Charges"><br>
+
+        <select name="gender">
+            <option value="">Select Gender</option>
+            <option>Male</option>
+            <option>Female</option>
+        </select><br>
+
+        <select name="Contract">
+            <option value="">Select Contract</option>
+            <option>Month-to-month</option>
+            <option>One year</option>
+            <option>Two year</option>
+        </select><br>
+
+        <select name="TechSupport">
+            <option value="">Tech Support</option>
+            <option>Yes</option>
+            <option>No</option>
+            <option>No internet service</option>
+        </select><br>
+
+        <select name="OnlineSecurity">
+            <option value="">Online Security</option>
+            <option>Yes</option>
+            <option>No</option>
+            <option>No internet service</option>
+        </select><br>
+
+        <select name="PaperlessBilling">
+            <option value="">Paperless Billing</option>
+            <option>Yes</option>
+            <option>No</option>
+        </select><br>
+
+        <input type="submit" value="Predict">
+    </form>
+
+    {% if prediction %}
+        <h3>{{ prediction }}</h3>
+    {% endif %}
+</body>
+</html>
