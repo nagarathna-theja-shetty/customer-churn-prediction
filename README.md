@@ -60,7 +60,7 @@ Then open your browser and go to `http://127.0.0.1:5000`
 ## 🙋‍♀️ Author
 
 **Nagarathna T Shetty**  
-Aspiring Data Analyst | BCA Graduate  
+Aspiring Data Scientist| BCA Graduate  
 🔗 [Live Web App](https://nagarathnatshetty.pythonanywhere.com)  
 
 ---
